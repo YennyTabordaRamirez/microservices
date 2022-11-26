@@ -4,7 +4,7 @@ spring:
       server:
         git:
           uri: https://github.com/YennyTabordaRamirez/microservices.git
-            default-label: master
+            default-label: main
             searchPaths: config-data
             username: ${GIT_USER}
             password: ${GIT_PASSWORD}
