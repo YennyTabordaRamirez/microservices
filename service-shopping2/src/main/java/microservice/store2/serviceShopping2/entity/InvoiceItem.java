@@ -1,6 +1,7 @@
 package microservice.store2.serviceShopping2.entity;
 
 import lombok.Data;
+import microservice.store2.serviceShopping2.model.ProductModel;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
@@ -23,6 +24,8 @@ public class InvoiceItem {
     @Transient  //Esto lo que hace es decirle que tenga presente este valor pero no lo pona en la BD's
     private Double subTotal;
 
+    @Transient
+    private ProductModel productModel;
 
     public Double getSubTotal(){
         if (this.price >0  && this.quantity >0 ){

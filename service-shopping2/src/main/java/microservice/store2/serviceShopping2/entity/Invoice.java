@@ -2,6 +2,7 @@ package microservice.store2.serviceShopping2.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
+import microservice.store2.serviceShopping2.model.CustomerModel;
 
 import javax.persistence.*;
 import javax.validation.Valid;
@@ -37,6 +38,9 @@ public class Invoice {
     private List<InvoiceItem> items;
 
     private String state;
+
+    @Transient //Esto lo que hace es decirle que tenga presente este valor pero no lo pona en la BD's
+    private CustomerModel customerModel;
 
     public Invoice(){
         items = new ArrayList<>();
